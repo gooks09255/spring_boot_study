@@ -1,6 +1,5 @@
 package jpabook.jpashop.domain.item;
 
-import javax.annotation.Generated;
 import javax.persistence.*;
 
 import jpabook.jpashop.domain.Category;
