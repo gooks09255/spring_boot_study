@@ -6,7 +6,7 @@ services:
     restart: always
     container_name: jpa_shop
     build:
-#      context:
+      context: src
       dockerfile: Dockerfile
     ports:
       - 8834:8080
