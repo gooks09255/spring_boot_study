@@ -1,7 +1,7 @@
 # build gradle
 FROM gradle:7.5-jdk17 AS build
-COPY --chown=gradle:gradle ../settings.gradle /home/gradle/src/settings.gradle
-COPY --chown=gradle:gradle ../build.gradle /home/gradle/src/
+COPY --chown=gradle:gradle ./settings.gradle /home/gradle/src/settings.gradle
+COPY --chown=gradle:gradle ./build.gradle /home/gradle/src/
 COPY --chown=gradle:gradle src /home/gradle/src/api
 WORKDIR /home/gradle/src
 RUN gradle build -x test --stacktrace
