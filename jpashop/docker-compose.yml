@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+
+  jpa_shop:
+    restart: always
+    container_name:   jpa_shop
+    build:
+      context: src
+      dockerfile: Dockerfile
+    ports:
+      - 8834:8080
