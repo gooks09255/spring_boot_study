@@ -10,4 +10,3 @@ services:
       dockerfile: src/Dockerfile
     ports:
       - 8834:8787
-##
