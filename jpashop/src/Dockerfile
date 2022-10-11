@@ -9,7 +9,7 @@ RUN gradle build -x test --stacktrace
 # production deployment
 FROM openjdk:17-jdk-slim
 ENV MODE=application
-ENV EXPOSE_PORT=8787
+ENV EXPOSE_PORT=8080
 
 EXPOSE ${EXPOSE_PORT}
 
