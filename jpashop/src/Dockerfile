@@ -4,7 +4,7 @@ COPY --chown=gradle:gradle ./settings.gradle /home/gradle/src/settings.gradle
 COPY --chown=gradle:gradle ./build.gradle /home/gradle/src/
 COPY --chown=gradle:gradle src /home/gradle/src/api
 WORKDIR /home/gradle/src
-RUN gradle build -x test --stacktrace
+RUN gradle build -x test --stacktraceex
 
 # production deployment
 FROM openjdk:17-jdk-slim
