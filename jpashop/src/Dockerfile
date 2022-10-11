@@ -15,4 +15,4 @@ EXPOSE ${EXPOSE_PORT}
 
 RUN mkdir /app
 COPY --from=build /home/gradle/src/build/libs/*.jar /app/*.jar
-CMD ["java", "-XshowSettings:vm", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseContainerSupport", "-jar", "/app/api.jar", "--spring.config.location=classpath:/${MODE}.properties"]
+CMD ["java", "-XshowSettings:vm", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseContainerSupport", "-jar", "/app/*.jar", "--spring.config.location=classpath:/${MODE}.properties"]
